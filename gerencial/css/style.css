@@ -1,0 +1,125 @@
+.alig-txt {
+  /*justify-content: center;*/
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 10px;
+}
+
+.one-padding {
+  padding: 0px;
+}
+
+.aling-button-txt {
+  display: flex;
+  justify-content: right;
+  margin-top: 10px;
+}
+
+.alert-aling-text {
+  margin-top: 15px; 
+  text-align: center;
+}
+
+.title-button-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title-button-page > h1 {
+  margin-bottom: 0px!important;
+}
+
+.input-new-text {
+  display: inline-grid;
+}
+
+.cke_browser_webkit {
+  width: 100%!important;
+}
+
+.banner-edit {
+  width: 100%;
+  margin-bottom: 10px;
+  max-height: 400px;  
+}
+
+.acoes {
+  width: 50px;
+}
+
+.custom-switch {
+  margin: 10px 0px;
+}
+
+a {
+  text-decoration: none!important;
+}
+
+.align-right {
+  justify-content: right;
+}
+
+.banner-resolution {
+  background-color: #ccc;
+  width: 80%;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.cap-event {
+  background-color: #ccc;
+  width: 50%;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.countDice {
+  background-color: #ccc;
+  padding: 0px 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+  .title-button-page {
+    display: block;
+  }
+
+  .align-grid {
+    display: grid!important;
+  }
+
+}
+
+.img-previa {
+    max-width: 150px;
+    max-height: 70px;
+}
+
+.img-par-edit {
+  float: left;
+}
+
+.img-poup {
+  max-height: 280px;
+  margin-bottom: 25px;
+}
+
+.div-engloba-img {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+@media(max-width: 500px) {
+  .img-poup {
+    max-height: 190px;
+  }
+}
+
+.cke_reset {
+  min-height: 450px!important;
+}
+

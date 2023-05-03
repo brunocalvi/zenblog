@@ -1,0 +1,17 @@
+RewriteEngine On 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteRule ^(.*)$ $1.php
+
+# Redirecionar para HTTPS WC
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#RewriteCond %{HTTPS} off
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#URL Amigavel
+RewriteRule ^home$ index.php
+RewriteRule ^404$ 404.php
+RewriteRule ^aboult$ aboult.php
+RewriteRule ^contact$ contact.php
+
+RewriteRule ^single-post/(.*)$ single-post.php?id=$1

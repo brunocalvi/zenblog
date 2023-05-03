@@ -1,0 +1,46 @@
+CREATE TABLE `postagens` (
+  `id` INT(255) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `titulo` VARCHAR(255) NOT NULL,
+  `descricao` VARCHAR(255) NOT NULL,
+  `conteudo` LONGTEXT NOT NULL,
+  `tags` VARCHAR(255),
+  `data_upload` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `path` VARCHAR(255) NOT NULL,
+  `destaque` VARCHAR(10) DEFAULT 'N', 
+  `ativa` VARCHAR(10) DEFAULT 'N',
+  `fonte` VARCHAR(255),
+  `hits` INT(255) DEFAULT 0
+);
+
+CREATE TABLE `login` (
+  `id` INT(100) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `login` VARCHAR(255) NOT NULL,
+  `senha` VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE `logs` (
+  `id` INT(255) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `ip` VARCHAR(100) NOT NULL,
+  `id_user` INT(100) NOT NULL,
+  `registro` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `descricao` VARCHAR(100)
+);
+
+CREATE TABLE `imagens` (
+	`id` INT(100) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	`registro` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	`path` VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE `comentarios` ( 
+	`id` INT(255) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`id_post` INT(255) NOT NULL,
+	`id_respondido` INT(255),
+	`nome` VARCHAR(30) NOT NULL,
+	`email` VARCHAR(30) NOT NULL,
+	`data` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	`comentario` VARCHAR(255) NOT NULL 
+);
+
+/* Usuario para logar */
+INSERT INTO `login`(`login`, `senha`) VALUES ('master', 'master');
